@@ -1,5 +1,5 @@
 # RN-Starter-And-Components
-This repository contains starter project and boilerplate components for react native
+This repository simple TMDB (https://www.themoviedb.org/) APP developed using react native
 
 # Install dependency
 - npm install

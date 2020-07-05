@@ -3,6 +3,7 @@ import {
   Text, StyleSheet, View, ScrollView
 } from 'react-native';
 import { connect } from 'react-redux';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import MovieDetailHeader from '../components/moviedetails/MovieDetailHeader';
 import { GetImageUrl300 } from '../../utils/Api';
 import Container from '../components/commons/Container';
@@ -13,16 +14,19 @@ import {
   storeMovieToLocal,
   deleteMovieLocal
 } from '../../redux/actions/LocalStorageAction';
-import {backNavigation} from '../../utils/Icons';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import { backNavigation } from '../../utils/Icons';
 
 class MovieDetailPage extends PureComponent {
-  
   static navigationOptions = ({ navigation }) => ({
     headerTransparent: true,
     title: '',
     headerLeft: (
-      <TouchableHighlight>
+      <TouchableHighlight
+        style={{ marginLeft: 10, marginTop: 5 }}
+        onPress={() => {
+          navigation.goBack();
+        }}
+      >
         {backNavigation()}
       </TouchableHighlight>
     )
@@ -32,7 +36,7 @@ class MovieDetailPage extends PureComponent {
     super(props);
     this.movie = this.props.navigation.getParam('movie');
     this.isSaved = false;
-    const savedObject = this.props.savedMovies.find((item) => { return item.id === this.movie.id; });
+    const savedObject = this.props.savedMovies.find((item) => item.id === this.movie.id);
     if (savedObject !== undefined) {
       this.isSaved = true;
     }

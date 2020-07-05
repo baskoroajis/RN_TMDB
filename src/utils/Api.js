@@ -2,7 +2,10 @@ import axios from 'axios';
 
 import config from './Config';
 
+//TODO put your movie database key here
 const MOVIEDB_KEY = '';
+
+
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/';
 const IMAGE_WIDTH_300 = 'w300';
 const withKey = (url) => `${url}?api_key=${MOVIEDB_KEY}`;

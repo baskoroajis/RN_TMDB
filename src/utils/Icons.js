@@ -1,8 +1,9 @@
 import React from 'react';
 import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import theme from './AppTheme';
 
-const { smallIconSize, mediumIconSize } = theme.specifications;
+const { smallIconSize, mediumIconSize, largeIconSize } = theme.specifications;
 const { inactive, white } = theme.colors;
 
 export const activeMovieTabIcon = () => (
@@ -38,9 +39,17 @@ export const inactiveBookmarkTabIcon = () => (
 );
 
 export const backNavigation = () => (
-  <IconMaterialIcons
-    name="back"
+  <FontAwesome
+    name="chevron-left"
     color={white}
-    size={mediumIconSize}
+    size={smallIconSize}
+  />
+);
+
+export const filmIcon = () => (
+  <FontAwesome
+    name="film"
+    color={white}
+    size={largeIconSize}
   />
 );

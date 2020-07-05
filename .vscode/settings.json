@@ -1,0 +1,9 @@
+{
+    "eslint.codeAction.showDocumentation": {
+    
+    },
+    "eslint.codeAction.disableRuleComment": {
+    
+    },
+    "eslint.format.enable": true
+}

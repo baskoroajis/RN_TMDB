@@ -29,10 +29,6 @@ class HomePage extends Component {
     props.loadLocalStorageOnFirstLoad();
   }
 
-  componentDidMount() {
-    console.log('test ', this.props.savedMovies);
-  }
-
   render() {
     return (
       <Container headerTransparent>

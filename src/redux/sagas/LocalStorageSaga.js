@@ -54,7 +54,6 @@ function* deleteMovie(movieToDelete) {
       yield put({ type: SET_MOVIE_REDUCER, movies });
     }
 
-    console.log('delete movie sukses ', movies);
   } catch (error) {
     console.log('error delete movie in local ', error);
   }

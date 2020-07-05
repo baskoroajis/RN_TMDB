@@ -36,9 +36,11 @@ class MovieDetailPage extends PureComponent {
     super(props);
     this.movie = this.props.navigation.getParam('movie');
     this.isSaved = false;
-    const savedObject = this.props.savedMovies.find((item) => item.id === this.movie.id);
-    if (savedObject !== undefined) {
-      this.isSaved = true;
+    if (this.props.savedMovies !== null){
+      const savedObject = this.props.savedMovies.find((item) => item.id === this.movie.id);
+      if (savedObject !== undefined) {
+        this.isSaved = true;
+      }
     }
   }
 

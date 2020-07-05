@@ -7,7 +7,6 @@ import theme from '../../../utils/AppTheme';
 class MovieList extends Component {
   constructor(props) {
     super(props);
-    console.log('navigation ', props.navigation);
   }
 
     renderItem = ({ item }) => (

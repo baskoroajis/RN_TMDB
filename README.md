@@ -9,7 +9,7 @@ This repository simple TMDB (https://www.themoviedb.org/) APP developed using re
 - npm run android
 - npm run ios
 
-# please change The Movie Database Key with your own
+# Please change TMDB Key with your own
 - const MOVIEDB_KEY in Api.js
 
 ![Alt text](ss1.png?raw=true "SS1")

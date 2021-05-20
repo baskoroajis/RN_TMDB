@@ -2,9 +2,8 @@ import axios from 'axios';
 
 import config from './Config';
 
-//TODO put your movie database key here
-const MOVIEDB_KEY = '';
-
+// TODO put your movie database key here
+const MOVIEDB_KEY = '1622eb3573df51c6468f0baec1e9c421';
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/';
 const IMAGE_WIDTH_300 = 'w300';

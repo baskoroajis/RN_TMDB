@@ -1,5 +1,5 @@
 import { put, call, takeEvery } from 'redux-saga/effects';
-import * as Api from '../../utils/Api';
+import * as Api from '../../../../../utils/Api';
 import {
   IS_LOADING,
   IS_FAILED,
@@ -9,7 +9,7 @@ import {
   GET_TOPRATED_MOVIE,
   GET_UPCOMING_MOVIE,
   GET_GENRE
-} from '../actions/ApiAction';
+} from '../actions/HomePageAction';
 // import { saveUser } from './LocalStorageSaga';
 
 function* GetNowPlaying(action) {

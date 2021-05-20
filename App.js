@@ -1,8 +1,15 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import React, { Component } from 'react';
 
-import HomeScreen from './src/views/screens/HomePage';
+// import HomeScreen from './src/views/screens/HomePage';
+// reduxsaga
+// import HomeScreen from './src/reduxsagaApproach/views/homepage/HomePage';
+// contextAPI
+import HomeScreen from './src/contextApiApproach/Homepage';
+import HomePageProvider from './src/contextApiApproach/HomePageProvider';
+
 import MovieDetailScreen from './src/views/screens/MovieDetailPage';
 import BookmarkListScreen from './src/views/screens/BookmarkListPage';
 
@@ -11,8 +18,13 @@ import {
 } from './src/utils/Icons';
 import theme from './src/utils/AppTheme';
 
+const HomePageScreenProvider = () => (
+  <HomePageProvider>
+    <HomeScreen />
+  </HomePageProvider>
+);
 const HomepageStack = createStackNavigator({
-  HomePage: { screen: HomeScreen },
+  HomePage: { screen: HomePageScreenProvider },
   MovieDetail: { screen: MovieDetailScreen },
 });
 
